@@ -12,7 +12,7 @@ class NearbyShopsController extends Controller
     public function show(){
 
 //Retrieve list of shops based on several criteria 
-$shops=Shop::where('liked', 0)->where('dislike_time','<',date('Y-m-d H:i:s',strtotime('-2 hour')))->orWhere('dislike_time',NULL)->get();
+$shops=Shop::where('dislike_time','<',date('Y-m-d H:i:s',strtotime('-2 hour')))->orWhere('dislike_time',NULL)->where('liked', 0)->get();
 return view('nearby_shops',compact('shops'));
     }
     public function update($action,$id){
