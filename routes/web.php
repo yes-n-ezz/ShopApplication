@@ -11,13 +11,24 @@
 |
 */
 Route::get('/', function() {   
-    return view('nearby_shops'); // will return app/views/index.php 
+    return view('auth/login'); // will return app/views/nearby_shops.blade.php 
 });
-Route::get('/nearbyShops/{action}/{id}','NearbyShopsController@update');
-Route::get('/nearbyShops','NearbyShopsController@show');
-Route::get('/myPreferedShops', function() {   
-    return view('mypreafered_shops'); // will return app/views/index.php 
-});
-Route::get('/my_prefered_shops','MyPreaferdShopsController@show');
-Route::get('/my_prefered_shops/{id}', 'MyPreaferdShopsController@update');
 
+Auth::routes();
+
+
+  // All my routes that needs a logged in user are inside this group
+Route::group(['middleware' => 'auth'], function () {
+
+   Route::get('/nearbyShops', function() {   
+    return view('nearby_shops'); // will return app/views/nearby_shops.blade.php 
+			});
+	Route::get('/nearbyShops/{action}/{id}','NearbyShopsController@update');
+	Route::get('/nearbyShops/{coordinates}','NearbyShopsController@show');
+	Route::get('/myPreferedShops', function() {   
+    return view('mypreafered_shops'); // will return app/views/mypreafered_shops.blade.php 
+	});
+	Route::get('/my_prefered_shops/{coordinates}','MyPreaferdShopsController@show');
+	Route::get('/my_prefered_shops/update/{id}', 'MyPreaferdShopsController@update');   
+
+});

@@ -15,9 +15,14 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('shop_name');
-            $table->integer('distance')->unsigned();
+            $table->string('name');
+            $table->string('picture');
+            $table->string('email');
+            $table->string('city');
+            $table->double('latitude');
+            $table->double('longitude');
             $table->boolean('liked')->default(false);
+            $table->timestamp('dislike_time')->nullable();
             $table->timestamps();
         });
     }

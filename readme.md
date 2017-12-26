@@ -1,9 +1,20 @@
 
-## About This application
+# About This application
 
-In this beta version i used a temporary database of my own just to vizualise the output of my code, this is due to some problems which i encountered during the importation of the real database from the code challenge but i will take care of that part at the end.That is why you need to execute these two command lines below in order to create shops table and fill it with some data.
+## Installation :
+- Run in your cmd: git clone https://github.com/yes-n-ezz/ShopApplication.git
 
-- php artisan migrate
-- php artisan db:seed
+-Create a database named "shop" , you can adjust the configuration of your database using  the file ".env"
+
+-Let's do some migration and seed with data imported from the MongoDB database.
+
+	php artisan migrate --seed
+
+-Now, visit http://localhost:8000 to try the application.
 
 
+## Nearby Shops
+(http://res.cloudinary.com/hapo/image/upload/v1514320664/NearbyShops_jch48k.png)
+
+## My preaferd Shops
+(http://res.cloudinary.com/hapo/image/upload/v1514320846/My_preaferd_shops_ukii6t.png)
