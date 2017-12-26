@@ -14,7 +14,7 @@
 
 
 ## Nearby Shops
-(http://res.cloudinary.com/hapo/image/upload/v1514320664/NearbyShops_jch48k.png)
+![Main Page - List of shops neaby my location sorted by distance](http://res.cloudinary.com/hapo/image/upload/v1514320664/NearbyShops_jch48k.png)
 
 ## My preaferd Shops
-(http://res.cloudinary.com/hapo/image/upload/v1514320846/My_preaferd_shops_ukii6t.png)
+![My Preferred Shop page - List of already preferred shops](http://res.cloudinary.com/hapo/image/upload/v1514320846/My_preaferd_shops_ukii6t.png)
