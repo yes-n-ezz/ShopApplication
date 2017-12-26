@@ -4,13 +4,13 @@
 ## Installation :
 - Run in your cmd: git clone https://github.com/yes-n-ezz/ShopApplication.git
 
--Create a database named "shop" , you can adjust the configuration of your database using  the file ".env"
+- Create a database named "shop" , you can adjust the configuration of your database using  the file ".env"
 
--Let's do some migration and seed with data imported from the MongoDB database.
+- Let's do some migration and seed with data imported from the MongoDB database.
 
 	php artisan migrate --seed
 
--Now, visit http://localhost:8000 to try the application.
+- Now, visit http://localhost:8000 to try the application.
 
 
 ## Nearby Shops
